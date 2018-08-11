@@ -33,11 +33,9 @@ echo "<br>";
 
 echo true+"op"."<br>"; //output 1
 echo 1+1-false;
-
-
-
-
-
-
+//dt- 11-08-018
+$x=200;
+$y=300;
+print $x;
 
 ?>
