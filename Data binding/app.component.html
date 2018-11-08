@@ -1,0 +1,23 @@
+<h3>Array in Object</h3>
+
+<ul class="list-group" *ngFor="let x of arr;let i=index">
+  <li class="list-group-item">
+      {{i+1}} &nbsp; {{x.sname}} &nbsp;  <strong>{{x.course}}</strong>
+  </li>
+</ul>
+
+<hr>
+<h3>Properties binding </h3>
+Name : <span [innerText]="uname" class="text-success m-5"></span>
+ Age : <span [innerText]="age" class="text-danger m-5"></span>
+ <input type="button" value="Get Data"  [disabled]="x"  >
+<br>
+ <h3>Two Way Databinding (JavaScript) Properties</h3><hr>
+
+ <input type="color" [(ngModel)]="backColor" class="form-control" style="width:150px;height:50px;"><br>
+
+ <div class="row">
+   <div [style.backgroundColor]="backColor"  class="col-md-6 m-5 p-5" style="border:2px solid ; border-radius:5px; height:300px;">
+     <h3>change background color</h3> {{backColor}}
+   </div>
+ </div>
