@@ -1,0 +1,87 @@
+<h3>Array in Object</h3>
+
+<ul class="list-group" *ngFor="let x of arr;let i=index">
+  <li class="list-group-item">
+      {{i+1}} &nbsp; {{x.sname}} &nbsp;  <strong>{{x.course}}</strong>
+  </li>
+</ul>
+
+<hr>
+<h3>Properties binding </h3>
+Name : <span [innerText]="uname" class="text-success m-5"></span>
+ Age : <span [innerText]="age" class="text-danger m-5"></span>
+ <input type="button" value="Get Data"  [disabled]="x"  >
+<br>
+ <h3>Two Way Databinding (JavaScript) Properties</h3><hr>
+
+ <input type="color" [(ngModel)]="backColor" class="form-control" style="width:150px;height:50px;"><br>
+
+ <div class="row">
+   <div [style.backgroundColor]="backColor"  class="col-md-6 m-5 p-5" style="border:2px solid ; border-radius:5px; height:300px;">
+     <h3>change background color</h3> {{backColor}}
+   </div>
+ </div>
+
+ <div class="row">
+   <div class="col-md-6">
+     <label for="">Choose Align</label>
+    <select [(ngModel)]="align" class="form-control">
+      <option>text-left</option>
+      <option>text-center</option>
+      <option>text-right</option>
+      <option>text-justify</option>
+    </select> <br>
+    <p class="alert alert-info {{align}}" >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. A vero ducimus ab aut sapiente maiores aliquam natus vel voluptatum eum laborum qui, sit, delectus dolor sed vitae quibusdam officia repellendus cupiditate tempora quod praesentium laboriosam cum amet! Quas aliquam animi praesentium blanditiis, 
+    </p>
+   </div>
+ </div>
+
+ <div class="row">
+   <div class="col-md-6">
+     <h3>HttpClient Service</h3>
+     <hr>
+    <input type="button" (click)="fun1()" value="Get Data From External Server" class="btn btn-primary">
+
+    <span class="badge badge-info">Lenth of Array : {{arr.length}}</span>
+    <br>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let x of arr">{{x.id}}
+       
+      </li>
+    </ul>
+   </div>
+ </div>
+<br>
+
+ <div class="row">
+   <div class="col-md-6">
+     <h1>Curd operation in HttpClient</h1><hr>
+     <input type="text" [(ngModel)]="s1" class="form-control" placeholder="id"> 
+     <input type="text"  [(ngModel)]="s2" class="form-control" placeholder="name">
+     <input type="text"  [(ngModel)]="s3" class="form-control" placeholder="loc">
+     <input type="button" class="btn btn-primary" value="Add" (click)="fun2()">
+     <input type="button" class="btn btn-primary ml-5" value="Get Data/Display" (click)="fun1()">
+   </div>
+   <div class="col md-6">
+     <table class="table responsive">
+       <tr>
+         <th>id</th>
+         <th>dept</th>
+         <th>loc</th>
+         <th>action</th>
+       </tr>
+       <tr *ngFor="let y of ar">
+         <td>{{y.id}}</td>
+         <td>{{y.name}}</td>
+         <td>{{y.loc}}</td>
+         <td>
+           <a href="" class="btn btn-danger" (click)="fun3(y.id)">Delete</a> &nbsp;
+           <a href="" class="btn btn-success">Select</a>
+         </td>
+       </tr>
+     </table>
+   </div>
+ </div>
+
+
