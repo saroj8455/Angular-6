@@ -1,0 +1,45 @@
+<div class="container col-md-6">
+
+<br><br>
+<div class="row">
+  <div class="col-md-12">
+    <input type="button" class="btn btn-primary"  value="GetData From W3School" (click)="fun1()">
+<p class="alert alert-success">Read data from https://www.w3schools.com/angular/customers.php </p>
+<table class="table border">
+  <tr>
+    <th>Name</th>
+    <th>Country</th>
+    <th>City</th>
+  </tr>
+  <tr *ngFor="let x of arr">
+    <td>{{x.Name}}  </td>
+    <td>{{x.Country}}</td>
+    <td>{{x.City}}</td>
+  </tr>
+</table>
+  </div>
+
+<div class="col-md-12">
+    <input type="button" class="btn btn-primary"  value="GetData" (click)="fun2()">
+<p class="alert alert-success">Read data from https://reqres.in/api/login </p>
+<table class="table border">
+  <tr>
+    <th>Name</th>
+    <th>Country</th>
+    <th>City</th>
+  </tr>
+  <tr *ngFor="let y of arr2">
+    <td>{{y.id}}</td>
+    <td>{{y.name}}</td>
+    <td>{{y.year}}</td>
+  </tr>
+</table>
+  </div>
+
+</div>
+
+
+
+
+
+</div> <!--colse container-->
