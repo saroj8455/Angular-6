@@ -1,0 +1,25 @@
+<h1>Department</h1>
+<hr>
+<p class="text-success">
+
+</p>
+
+<table class="table bordered">
+    <tr>
+        <th>Dept Id</th>
+        <th>Dept Name</th>
+    </tr>
+  
+    <tr *ngFor="let x of deptObj">
+      <td>{{x.id}}</td>
+      <td>{{x.dept}}</td>
+      <!--parse the x.id as a parameter  step-4 parse the id into display_more component-->
+      <td><a [routerLink]="['/more',x.id]" class="btn btn-primary">More...</a></td>
+    </tr>
+  
+  </table>
+
+<p class="text-danger">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis in commodi error animi, temporibus maiores est eius, perspiciatis eligendi quia ipsa at consequatur eaque qui excepturi eum consectetur. Quod, accusamus!
+</p>
+  

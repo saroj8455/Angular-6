@@ -1,0 +1,39 @@
+<style>
+.list-group{
+  display: inline-block;
+  
+}
+.list-group-item{
+  border: none;
+}
+li:hover{
+  background-color: orange;
+  cursor: pointer;
+}
+</style>
+<div class="container col-md-8">
+
+<!-- start heading-->
+<div class="jumbotron">
+  <h1 class="text-info text-center"> SPA (Single Page Application)</h1>
+  <h1 class="text-danger text-center">Welcome to blog</h1>
+</div>
+<!-- end heading-->
+<div class="row">
+<div class="col-md-2">
+<ul class="list-group">
+<!--step-3 prepare link-->
+  <li class="list-group-item active "><a [routerLink]="['']" class="text-white" > Home </a></li>
+  <li class="list-group-item ">  <a [routerLink]="['dept']">Department</a></li> 
+  <li class="list-group-item"> <a [routerLink]="['emp']">Employee</a></li>
+  <li class="list-group-item"><a [routerLink]="['contact']">Contact Us</a></li>
+  <li class="list-group-item"><a [routerLink]="['about']">About Us</a></li>
+</ul>
+</div>
+
+  <div class="col-md-10">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+</div>
