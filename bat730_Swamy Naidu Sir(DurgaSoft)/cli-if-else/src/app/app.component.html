@@ -1,0 +1,44 @@
+<style>
+.xyz{
+  font-size:20px;
+  color:blue;
+  font-weight:bold;
+}
+</style>
+{{x}}-{{y}}
+<h1 *ngIf="x>y;else abc">
+  X Is big
+</h1>
+
+<ng-template #abc>
+<h1>
+  Y Is big
+</h1>
+</ng-template>
+<!----------------------->
+<select [(ngModel)]="drp1">
+  <option>Mango</option>
+  <option>Apple</option>
+  <option>All</option>
+</select>
+<div [ngSwitch]="drp1">
+  <div *ngSwitchCase='"Mango"'>
+    <img src="../assets/mango.jpg" width="100">
+  </div>
+  <div *ngSwitchCase="'Apple'">
+    <img src="../assets/apple.jpg" width="100">
+  </div>
+  <div *ngSwitchDefault>
+    <img src="../assets/all.jpg" width="100">
+  </div>
+</div>
+<p [ngStyle]="{color:'red',fontSize:'40px'}">Welcome</p>
+<div [ngClass]="'xyz'">
+  SCOTT
+</div>
+
+
+
+
+
+

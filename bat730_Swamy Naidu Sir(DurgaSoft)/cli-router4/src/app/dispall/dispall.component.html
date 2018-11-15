@@ -1,0 +1,15 @@
+<div>
+  <div *ngFor="let x of allpro" style="border:1px solid silver;width:250px;height:400px;float:left;margin-right:10px;box-shadow:0px 0px 10px black;border-radius:10px">
+    <h2 style="color:rgb(50, 50, 192)">{{x.pname}}</h2>
+    <img src="../../assets/{{x.image}}" width="150px" height="155px" style="margin-left:20px">
+    <br>
+    Price:<span style="text-decoration:line-through">{{x.oprice}}</span> <span style='font-size:20px'>{{x.price | currency:"INR"}}</span>
+    <br>
+    {{x.desp}}
+    <br>
+    Color:<span [ngStyle]="{color:x.color,backgroundColor:x.color}">XXXX</span>
+    <br><br>
+    <button class="btn btn-primary" [routerLink]="['disp',{proid:x.pid}]">More</button>
+    &nbsp;<button class="btn btn-danger">Add to Cart</button>
+  </div>
+</div>

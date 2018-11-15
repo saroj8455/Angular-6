@@ -1,0 +1,27 @@
+<table border='1'>
+  <th>Username</th>
+  <th>City</th>
+  <th>Operations</th>
+  <tr *ngFor="let row of tab_data">
+    <td>{{row.uname}}</td><td>{{row.city}}</td>
+    <td><img src="../assets/del.png" width="30" (click)="fundel(row.uname)">
+      <img src="../assets/up.jpg" width="30" (click)="funupdate(row)">
+    </td>
+  </tr>
+</table>
+<div>
+    <h2>Insert</h2>
+    Name:<input [(ngModel)]="t1">
+    <br>
+    City:<input [(ngModel)]="t2">
+    <br>
+    <input type="button" value="Insert" (click)="funins()">
+  </div>
+  <div>
+      <h2>Update</h2>
+      Name:<input [(ngModel)]="t11">
+      <br>
+      City:<input [(ngModel)]="t22">
+      <br>
+      <input type="button" value="Modify" (click)="funmod()">
+    </div>

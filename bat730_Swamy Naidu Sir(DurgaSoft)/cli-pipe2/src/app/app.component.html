@@ -1,0 +1,17 @@
+{{uname | p1}}
+{{'rajesh' | p1}}
+
+{{'suresh' | p2}}
+
+{{'santosh' | p2 | p1}}
+
+<div *ngFor="let x of obj">
+ <div *ngIf="x.sal>=10000">
+  {{x.uname}} -- {{x.sal | currency :"INR"}}
+ </div>
+</div>
+<hr>
+<div *ngFor="let x of obj">
+  {{x.uname | p4:x.sal:'hi'}}
+
+</div>

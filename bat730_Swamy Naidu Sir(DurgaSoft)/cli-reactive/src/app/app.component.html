@@ -1,0 +1,9 @@
+<form [formGroup]="myform">
+  <input type="text" formControlName="username">
+<span *ngIf="myform.controls.username.touched && myform.controls.username.errors && myform.controls.username.errors.required">Enter text </span>
+<span *ngIf="myform.controls.username.errors && myform.controls.username.errors.minlength">Min len > 5</span>
+<br>
+<input type="text" formControlName="age">
+<span *ngIf="myform.controls.age.errors && myform.controls.age.errors.required">Enter age</span>
+<span *ngIf="myform.controls.age.errors && myform.controls.age.errors.pattern">Age Should num</span>
+</form>

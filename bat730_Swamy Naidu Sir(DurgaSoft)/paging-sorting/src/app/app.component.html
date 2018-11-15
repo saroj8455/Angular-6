@@ -1,0 +1,15 @@
+<style>
+  th{
+    cursor: pointer;
+  }
+</style>
+<input type="text" class="form-control" [(ngModel)]="txt1">
+<table class="table table-resaponsive">
+  <th (click)="funorder('uname')">Username</th>
+  <th (click)="funorder('city')">City</th>
+  <tr *ngFor="let x of obj|filter:txt1 |orderBy:or:ordvar| paginate:{itemsPerPage:6,currentPage:tmp}">
+    <td>{{x.uname}}</td>
+    <td>{{x.city}}</td>
+  </tr>
+</table>
+<pagination-controls (pageChange)="tmp=$event" (click)="fun1()"></pagination-controls>

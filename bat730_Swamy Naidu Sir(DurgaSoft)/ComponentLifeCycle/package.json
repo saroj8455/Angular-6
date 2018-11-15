@@ -1,0 +1,25 @@
+{
+  "name": "shoppingcart",
+  "version": "0.1.2",
+  "description": "this is shopping cart app with meany offers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "scott",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/animations": "^6.1.9",
+    "@angular/common": "5.2.10",
+    "@angular/compiler": "5.2.10",
+    "@angular/core": "5.2.10",
+    "@angular/forms": "^5.2.10",
+    "@angular/platform-browser": "5.2.10",
+    "@angular/platform-browser-dynamic": "5.2.10",
+    "core-js": "latest",
+    "express": "^4.16.3",
+    "rxjs": "5.5.6",
+    "systemjs": "latest",
+    "zone.js": "latest"
+  }
+}

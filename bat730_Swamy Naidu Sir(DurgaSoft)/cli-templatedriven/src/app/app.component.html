@@ -1,0 +1,40 @@
+<style>
+    input.ng-valid{
+        color:green;
+
+    }
+    input.ng-invalid{
+        color:red;
+        border-color: red;
+    }
+    input{
+        color:silver;
+    }
+</style>
+<form #fm="ngForm">
+    <input type="text" name="t1" [(ngModel)]="txt1" required #c1="ngModel">
+    <span *ngIf="c1.touched && c1.invalid"> Enter username</span>
+    <br>
+    <input type="text" name="t2" [(ngModel)]="txt2" minlength="5" required #c2="ngModel">
+    <span *ngIf="c2.touched && c2.errors && c2.errors.required">Enter Password</span>
+    <span *ngIf="c2.touched && c2.errors && c2.errors.minlength">Min len >=5</span>
+    
+<br>
+<input type="text" name="t3" [(ngModel)]="txt3" #c3="ngModel" pattern="[0-9]*">
+<span *ngIf="c3.touched && c3.errors && c3.errors.required">Enter Number</span>
+<span style="color:Red " *ngIf=" c3.errors && c3.errors.pattern">Only numbers</span>
+<br>
+<select name="drp1" [(ngModel)]="d1" required #c4="ngModel">
+    <option value="">Select a City</option>
+    <option >Hyd</option>
+    <option>Sec</option>
+</select>
+<span *ngIf="c4.dirty && c4.errors && c4.errors.required">Please Select one city</span>
+<br>
+<input type="checkbox" [(ngModel)]="chk1" name="c1" required #c5="ngModel">I A T&C
+<span *ngIf="c5.errors && c5.errors.required" style="color:red">Select T&c</span>
+<br>
+<input type="button"  value="Register" (click)="funregis(fm)">
+</form>
+<input type="text" [(ngModel)]="tt" (blur)="funx()">
+<span *ngIf="tmp">Enter min 5 char</span>
